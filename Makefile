@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk 
 
 PKG_NAME:=luci-app-clash
-PKG_VERSION:=1.7.1
+PKG_VERSION:=1.7.1.1
 PKG_MAINTAINER:=frainzy1477
 
 
@@ -114,6 +114,8 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/usr/share/clashbackup
 	$(INSTALL_DIR) $(1)/etc/clash/provider
+	$(INSTALL_DIR) $(1)/etc/clash/clash
+	$(INSTALL_DIR) $(1)/etc/clash/clashr
 	$(INSTALL_DIR) $(1)/usr/share/clash/config
 	$(INSTALL_DIR) $(1)/usr/share/clash/config/sub
 	$(INSTALL_DIR) $(1)/usr/share/clash/config/upload
@@ -123,6 +125,8 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_BIN) 	./root/etc/init.d/clash $(1)/etc/init.d/clash
 	$(INSTALL_CONF) ./root/etc/config/clash $(1)/etc/config/clash
 	$(INSTALL_CONF) ./root/etc/clash/* $(1)/etc/clash/
+	$(INSTALL_CONF) ./root/etc/clash/clash/* $(1)/etc/clash/clash
+	$(INSTALL_CONF) ./root/etc/clash/clashr/* $(1)/etc/clash/clashr
 
 	$(INSTALL_BIN) ./root/usr/share/clash/*.sh $(1)/usr/share/clash/
 	$(INSTALL_BIN) ./root/usr/share/clash/dns.yaml $(1)/usr/share/clash/
