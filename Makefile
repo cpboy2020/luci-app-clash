@@ -124,7 +124,7 @@ define Package/$(PKG_NAME)/install
 	
 	$(INSTALL_BIN) 	./root/etc/init.d/clash $(1)/etc/init.d/clash
 	$(INSTALL_CONF) ./root/etc/config/clash $(1)/etc/config/clash
-	$(INSTALL_CONF) ./root/etc/clash/* $(1)/etc/clash/
+	$(INSTALL_CONF) ./root/etc/clash/Country.mmdb $(1)/etc/clash/
 	$(INSTALL_CONF) ./root/etc/clash/clash/* $(1)/etc/clash/clash
 	$(INSTALL_CONF) ./root/etc/clash/clashr/* $(1)/etc/clash/clashr
 
