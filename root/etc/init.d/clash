@@ -3,8 +3,8 @@
 START=99
 STOP=15
 
-CLASH="/etc/clash/clash"
-CLASHR="/usr/bin/clash"
+CLASH="/etc/clash/clash/clash"
+CLASHR="/etc/clash/clashr/clash"
 CLASHT="/etc/clash/clashtun/clash"
 CLASHD="/etc/clash/dtun/clash"
 CLASH_CONFIG="/etc/clash"
