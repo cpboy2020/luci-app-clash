@@ -118,8 +118,8 @@ update(){
 			fi
 			  
 		    if [ $CORETYPE -eq 1 ];then
-			  rm -rf /etc/clash/clash >/dev/null 2>&1
-			  mv /tmp/clash /etc/clash/clash >/dev/null 2>&1
+			  rm -rf /etc/clash/clash/clash >/dev/null 2>&1
+			  mv /tmp/clash /etc/clash/clash/clash >/dev/null 2>&1
 			  rm -rf /usr/share/clash/core_version >/dev/null 2>&1
 			  mv /usr/share/clash/download_core_version /usr/share/clash/core_version >/dev/null 2>&1
 
@@ -131,8 +131,8 @@ update(){
 
 			
 		    elif [ $CORETYPE -eq 2 ];then
-			  rm -rf /usr/bin/clash >/dev/null 2>&1
-			  mv /tmp/clash /usr/bin/clash >/dev/null 2>&1
+			  rm -rf /etc/clash/clashr/clash >/dev/null 2>&1
+			  mv /tmp/clash /etc/clash/clashr/clash >/dev/null 2>&1
 			  rm -rf /usr/share/clash/corer_version >/dev/null 2>&1
 			  mv /usr/share/clash/download_corer_version /usr/share/clash/corer_version >/dev/null 2>&1
 			  
