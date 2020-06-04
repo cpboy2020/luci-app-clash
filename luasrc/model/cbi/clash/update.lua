@@ -13,8 +13,6 @@ font_off = [[</font>]]
 bold_on  = [[<strong>]]
 bold_off = [[</strong>]]
 
-
-
 ko = Map("clash")
 ko.reset = false
 ko.submit = false
@@ -104,7 +102,6 @@ if luci.http.formvalue("upload") then
 		um.value = translate("No specify upload file.")
 	end
 end
-
 
 
 m = Map("clash")
