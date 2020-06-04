@@ -191,10 +191,10 @@ end
 
 
 local function clash_core()
-	if nixio.fs.access("/etc/clash/clash") then
-		local core=luci.sys.exec("/etc/clash/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
+	if nixio.fs.access("/etc/clash/clash/clash") then
+		local core=luci.sys.exec("/etc/clash/clash/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
 		if core ~= "" then
-			return luci.sys.exec("/etc/clash/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
+			return luci.sys.exec("/etc/clash/clash/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
 		else
 			return luci.sys.exec("sed -n 1p /usr/share/clash/core_version")
 		end
@@ -205,10 +205,10 @@ end
 
 
 local function clashr_core()
-	if nixio.fs.access("/usr/bin/clash") then
-		local core=luci.sys.exec("/usr/bin/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
+	if nixio.fs.access("/etc/clash/clashr/clash") then
+		local core=luci.sys.exec("/etc/clash/clashr/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
 		if core ~= "" then
-			return luci.sys.exec("/usr/bin/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
+			return luci.sys.exec("/etc/clash/clashr/clash -v 2>/dev/null |awk -F ' ' '{print $2}'")
 		else
 			return luci.sys.exec("sed -n 1p /usr/share/clash/corer_version")
 		end
