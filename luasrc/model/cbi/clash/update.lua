@@ -42,8 +42,8 @@ um = sul:option(DummyValue, "", nil)
 um.template = "clash/clash_dvalue"
 
 local dir, fd,dtun,ctun,cssr
-dir = "/etc/clash/"
-cssr="/usr/bin/"
+dir = "/etc/clash/clash"
+cssr="/etc/clash/clashr"
 dtun="/etc/clash/dtun/"
 ctun="/etc/clash/clashtun/"
 
@@ -76,12 +76,12 @@ http.setfilehandler(
 			fd = nil
 			
 			if fp == "clash" then
-			    	SYS.exec("chmod 755 /etc/clash/clash 2>&1 &")
-				SYS.exec("rm -rf /usr/share/clash/core_version 2>/dev/null && /etc/clash/clash -v | awk -F ' ' '{print $2}' >> /usr/share/clash/core_version 2>/dev/null")
+			    	SYS.exec("chmod 755 /etc/clash/clash/clash 2>&1 &")
+				SYS.exec("rm -rf /usr/share/clash/core_version 2>/dev/null && /etc/clash/clash/clash -v | awk -F ' ' '{print $2}' >> /usr/share/clash/core_version 2>/dev/null")
 				um.value = translate("File saved to") .. ' "/etc/clash/'..meta.file..'"'
 			elseif fp == "clashr" then
-			    	SYS.exec("chmod 755 /usr/bin/clash 2>&1 &")
-				SYS.exec("rm -rf /usr/share/clash/corer_version 2>/dev/null && /usr/bin/clash -v | awk -F ' ' '{print $2}' >> /usr/share/clash/corer_version 2>/dev/null")
+			    	SYS.exec("chmod 755 /etc/clash/clashr/clash 2>&1 &")
+				SYS.exec("rm -rf /usr/share/clash/corer_version 2>/dev/null && /etc/clash/clashr/clash -v | awk -F ' ' '{print $2}' >> /usr/share/clash/corer_version 2>/dev/null")
 				um.value = translate("File saved to") .. ' "/usr/bin/'..meta.file..'"'
 			elseif fp == "clashctun" then
 			    	SYS.exec("chmod 755 /etc/clash/clashtun/clash 2>&1 &")
